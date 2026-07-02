@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salah Mohamud Mohamed | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+html{scroll-behavior:smooth}
+body{
+background:#0f172a;
+color:#fff;
+transition:.4s;
+}
+body.light{
+background:#f5f5f5;
+color:#111;
+}
+header{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(0,0,0,.4);
+backdrop-filter:blur(8px);
+z-index:1000;
+}
+.logo{
+font-size:26px;
+font-weight:bold;
+color:#38bdf8;
+}
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+}
+body.light nav a{color:#111;}
+
+.toggle{
+padding:8px 15px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+background:#38bdf8;
+}
+
+section{
+min-height:100vh;
+padding:120px 10%;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.hero{
+display:flex;
+flex-wrap:wrap;
+gap:50px;
+align-items:center;
+}
+
+.hero img{
+width:300px;
+height:300px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #38bdf8;
+animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+50%{transform:translateY(-15px);}
+}
+
+.text h1{
+font-size:50px;
+}
+
+.text span{
+color:#38bdf8;
+}
+
+.text p{
+margin:20px 0;
+max-width:500px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 30px;
+background:#38bdf8;
+color:#000;
+text-decoration:none;
+border-radius:40px;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+padding:25px;
+background:#1e293b;
+border-radius:15px;
+transition:.4s;
+}
+
+body.light .card{
+background:white;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.contact form{
+display:flex;
+flex-direction:column;
+gap:15px;
+max-width:500px;
+width:100%;
+}
+
+input,textarea{
+padding:15px;
+border:none;
+border-radius:10px;
+}
+
+button{
+padding:15px;
+background:#38bdf8;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold;
+}
+
+footer{
+padding:30px;
+text-align:center;
+background:#111827;
+}
+
+.social a{
+color:#38bdf8;
+margin:10px;
+font-size:18px;
+text-decoration:none;
+}
+
+@media(max-width:768px){
+.hero{
+flex-direction:column;
+text-align:center;
+}
+.text h1{
+font-size:35px;
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Salah</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<button class="toggle" onclick="darkMode()">🌙</button>
+
+</header>
+
+<section id="home">
+
+<div class="hero">
+
+<img src="salah.jpg" alt="Profile">
+<div class="text">
+
+<h1>Hi, I'm <span>Salah Mohamud Mohamed</span></h1>
+
+<p>
+Web Developer passionate about creating modern,
+responsive and beautiful websites.
+</p>
+
+<a href="cv.pdf" class="btn" download>Download CV</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<div>
+
+<h1>About Me</h1>
+
+<br>
+
+<p>
+
+I am a beginner web developer from Somalia.
+I enjoy learning HTML, CSS and JavaScript while
+building modern websites.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<div>
+
+<h1>My Skills</h1>
+
+<br>
+
+<div class="cards">
+
+<div class="card">
+<h2>HTML</h2>
+<p>Building webpage structure.</p>
+</div>
+
+<div class="card">
+<h2>CSS</h2>
+<p>Modern responsive design.</p>
+</div>
+
+<div class="card">
+<h2>JavaScript</h2>
+<p>Interactive websites.</p>
+</div>
+
+<div class="card">
+<h2>Responsive</h2>
+<p>Works on phone and computer.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="contact">
+
+<h1>Contact Me</h1>
+
+<br>
+
+<form action="https://formspree.io/f/yourid" method="POST">
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea rows="5" placeholder="Message"></textarea>
+
+<button>Send Message</button>
+
+</form>
+
+<br>
+
+<div class="social">
+
+<a href="mailto:saalaxmaxamuudm@gmail.com">📧 Email</a>
+
+<a href="https://wa.me/252614366021">💬 WhatsApp</a>
+
+<a href="#">GitHub</a>
+
+<a href="#">Facebook</a>
+
+<a href="#">LinkedIn</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Salah Mohamud Mohamed
+
+</footer>
+
+<script>
+
+function darkMode(){
+
+document.body.classList.toggle("light");
+
+}
+
+</script>
+
+</body>
+</html>
